@@ -1,0 +1,11 @@
+<%= form_for @urls do |f| %>
+<div>
+	<%= f.label :link, "URL" %><br>
+	<%= f.text_field :link %>
+<div>
+	<%= f.label :hash_code, "regenerated URL" %><br>
+	<%= f.text_field :hash_code %>
+</div>
+
+
+<% end %>

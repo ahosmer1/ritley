@@ -1,0 +1,10 @@
+<h1>Ritly</h1>
+	<p>URL to shorten</p><%= form_tag "/",  :method => :get, :code => "urls#create" do %>
+		<div class="input-append">
+		<%= text_field_tag :q, params[:q], {:code => "urls#preview"}%>
+		<%= submit_tag "Create URL", :class => "btn" %>
+		<% end %>
+	</div>
+	
+
+		

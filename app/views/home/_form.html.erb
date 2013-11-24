@@ -1,0 +1,11 @@
+<%= form_for @urls do |f| %>
+<div>
+	<%= f.label :url, "Name of movie" %><br>
+	<%= f.text_field :url %>
+<div>
+	<%= f.label :hash_code, "Description" %><br>
+	<%= f.text_field :hash_code %>
+</div>
+
+<%= f.submit "Submit" %>
+<% end %>
