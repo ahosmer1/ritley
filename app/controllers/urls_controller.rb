@@ -4,12 +4,13 @@ class UrlsController < ApplicationController
 		
 	end
 	def create
-		@urls = Url.new( safe_url_params )
+		@urls = Url.create
 		@urls.save
 		redirect_to "urls#show"
 		
 	end
 	def show
+		@urls = Url.find(params[:id])
 
 	end
 end
