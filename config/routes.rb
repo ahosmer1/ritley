@@ -1,6 +1,6 @@
 Ritly::Application.routes.draw do
-  root "urls#index"
-        resources :urls #TODO: restrict this to just :create, :new and :show
+  root "home#index"
+        resources :urls, only: [:new, :create, :show]#TODO: restrict this to just :create, :new and :show
         
         get '/:code' => 'urls#redirector'
         get '/:code/preview' => 'urls#preview'
